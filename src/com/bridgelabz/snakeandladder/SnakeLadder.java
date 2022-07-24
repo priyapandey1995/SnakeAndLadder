@@ -9,7 +9,7 @@ public class SnakeLadder {
 		 * 
 		 */
 		System.out.println("Welcome to the Sanke and ladder program");
-		System.out.println("========================================");
+		System.out.println("**************************************");
 		Player play = new Player();
 		play.toRollADice();
 	}
