@@ -20,7 +20,7 @@ public class Player {
 		 *	if its 1 then : its ladder
 		 *	if its 2 then :its snake
 		 *
-		 * checks for the winning position
+		 * checks for the exact winning position
 		 * 
 		 */
 		
@@ -39,12 +39,10 @@ public class Player {
 			break;
 			
 			case 1:System.out.println("its a Ladder");
-			if(playerPosition<winningPosition) {
-			playerPosition = playerPosition+diceRolling;
+			playerPosition= playerPosition+diceRolling;
+			if(playerPosition>winningPosition) {
+			playerPosition = playerPosition-diceRolling;
 			System.out.println("Players position would be :" + playerPosition);
-			}
-			else {
-				playerPosition = playerPosition;
 			}
 		    break;
 			
@@ -54,14 +52,20 @@ public class Player {
 				playerPosition = 0;
 				break;
 			}
+		}
+			System.out.println("player position is "+playerPosition);
+			if(playerPosition == winningPosition)
+			{
+				System.out.println("it has reached to the winning position");
+			}
 			
 				
-		}
+		
 		
 		
 		
 	}
-		System.out.println("players current position is :" + playerPosition);
+
 		
 		
 	}
