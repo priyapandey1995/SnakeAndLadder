@@ -21,14 +21,18 @@ public class Player {
 		 *	if its 2 then :its snake
 		 *
 		 * checks for the exact winning position
+		 * count variable is initialized to check the number of times the dice is played
 		 * 
 		 */
 		
 		int playerPosition =0;
+		int count = 0;
 		
 		System.out.println("Initial position of the player is :"+  playerPosition);
 		
 		while(playerPosition!=winningPosition) {
+		
+			 count++;
 			
 		int diceRolling = (int)(Math.floor((Math.random()*6)+1));
 		
@@ -53,10 +57,12 @@ public class Player {
 				break;
 			}
 		}
+			
 			System.out.println("player position is "+playerPosition);
 			if(playerPosition == winningPosition)
 			{
 				System.out.println("it has reached to the winning position");
+				System.out.println("the total no of time the dice was played to win the game"+ " "+count);
 			}
 			
 				
